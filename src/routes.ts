@@ -1,4 +1,3 @@
-import { prisma } from "./prisma";
 import express from "express";
 import { SubmitFeedbackUseCase } from "./useCases/SubmitFeedbackUseCase";
 import { PrismaFeedbacksRepository } from "./repositories/prisma/PrismaFeedbacksRepository";
@@ -6,14 +5,14 @@ import { NodemailerMailAdapter } from "./adapters/nodemailer/NodemailerMailAdapt
 
 export const routes = express.Router();
 
-
 routes.post("/feedbacks", async (request, response) => {
   const { type, comment, screenshot } = request.body;
 
-  const nodemailerAdapter = new NodemailerMailAdapter()
+  const nodemailerAdapter = new NodemailerMailAdapter();
   const prismaFeedbacksRepository = new PrismaFeedbacksRepository();
   const submitFeedbackUseCase = new SubmitFeedbackUseCase(
-    prismaFeedbacksRepository,nodemailerAdapter
+    prismaFeedbacksRepository,
+    nodemailerAdapter
   );
 
   await submitFeedbackUseCase.execute({
@@ -21,4 +20,6 @@ routes.post("/feedbacks", async (request, response) => {
     comment,
     screenshot,
   });
- 
+
+  return response.status(201).send();
+});

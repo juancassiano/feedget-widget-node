@@ -1,7 +1,6 @@
-import { SendMailData } from './../MailAdapter';
+import { SendMailData } from "./../MailAdapter";
 import { MailAdapter } from "../MailAdapter";
 import nodemailer from "nodemailer";
-
 
 const transport = nodemailer.createTransport({
   host: "smtp.mailtrap.io",
@@ -12,17 +11,13 @@ const transport = nodemailer.createTransport({
   },
 });
 
-
 export class NodemailerMailAdapter implements MailAdapter {
-  async sendMail ({subject, body})}:SendMailData) {
+  async sendMail({ subject, body }: SendMailData) {
     await transport.sendMail({
-        from: "Equipe Feedget <oi@feedget.com>",
-        to: "Juan Cassiano <juancassiano@hotmail.com>",
-        subject,
-        html: body,
-      });
-    
-      return response.status(201).send();
+      from: "Equipe Feedget <oi@feedget.com>",
+      to: "Juan Cassiano <juancassiano@hotmail.com>",
+      subject,
+      html: body,
     });
   }
 }
