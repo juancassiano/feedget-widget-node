@@ -66,8 +66,9 @@ Recebe um feedback com tipo, comentário e foto, salva no banco e envia por emai
   <img align="center" alt="Juan-VsCode" height="30" width="40" src="https://github.com/devicons/devicon/blob/master/icons/vscode/vscode-original.svg">
   <img align="center" alt="Juan-Express" height="30" width="40" src="https://github.com/devicons/devicon/blob/master/icons/express/express-original-wordmark.svg">
   <img align="center" alt="Juan-NPM" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/npm/npm-original-wordmark.svg">
+  <img align="center" alt="Juan-Prisma" height="30" width="40" src="./.github/prisma.svg">
   <img align="right" alt="Juan-GIF" height="150" style="border-radius:50px;" src="https://cdn.discordapp.com/attachments/768628359797407785/927646633691324486/Design_sem_nome.gif">
 </div>
-## Autores
+## Autor
 
 - [Juan Cassiano](https://www.github.com/juancassiano)
